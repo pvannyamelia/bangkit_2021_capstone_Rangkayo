@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:chainUseRtl="true"
+    tools:context=".RegisterActivity"
+    tools:ignore="Autofill">
+
+    <TextView
+        android:id="@+id/signup"
+        android:layout_marginTop="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/sign_up"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/hello"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans"
+        android:text="@string/hello_welcome"
+        android:textColor="@color/black"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/etEmail"
+        app:layout_constraintStart_toStartOf="@+id/signup"
+        app:layout_constraintTop_toBottomOf="@id/signup" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="30dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintBottom_toTopOf="@id/etPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hello"
+        app:hintEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:background="@drawable/edittext"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans"
+            android:hint="@string/email"
+            android:drawableStart="@drawable/ic_envelope"
+            android:drawablePadding="4dp"
+            android:inputType="textEmailAddress"
+            android:padding="16dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintBottom_toTopOf="@id/etConfirmPassword"
+        app:layout_constraintEnd_toEndOf="@id/etEmail"
+        app:layout_constraintStart_toStartOf="@id/etEmail"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleDrawable="@drawable/show_password"
+        app:hintEnabled="false"
+        app:passwordToggleTint="?colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/etEmail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:background="@drawable/edittext"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans"
+            android:hint="@string/password"
+            android:drawableStart="@drawable/ic_padlock"
+            android:drawablePadding="4dp"
+            android:inputType="textPassword"
+            android:padding="16dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etConfirmPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintBottom_toTopOf="@id/btnCreateAccount"
+        app:layout_constraintEnd_toEndOf="@id/etPassword"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="?colorPrimary"
+        app:passwordToggleDrawable="@drawable/show_password"
+        app:hintEnabled="false"
+        app:layout_constraintStart_toStartOf="@id/etPassword"
+        app:layout_constraintTop_toBottomOf="@id/etPassword" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:background="@drawable/edittext"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans"
+            android:hint="@string/confirm_password"
+            android:drawableStart="@drawable/ic_padlock"
+            android:drawablePadding="4dp"
+            android:inputType="textPassword"
+            android:padding="16dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnCreateAccount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="40dp"
+        android:text="@string/sign_up"
+        android:background="@drawable/button_prim"
+        app:layout_constraintBottom_toTopOf="@id/btnSignIn2"
+        app:layout_constraintEnd_toEndOf="@id/etConfirmPassword"
+        app:layout_constraintStart_toStartOf="@id/etConfirmPassword"
+        app:layout_constraintTop_toBottomOf="@id/etConfirmPassword" />
+
+    <TextView
+        android:id="@+id/google_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="75dp"
+        android:fontFamily="@font/opensans"
+        android:text="By clicking Sign Up, you agree to the Terms of Services and Privacy Policy"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btnSignIn2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCreateAccount"
+        app:layout_constraintVertical_bias="0.194" />
+
+    <TextView
+        android:id="@+id/btnSignIn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/opensans"
+        android:text="Already a member?"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/btn_sign_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/google_button"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@id/btnCreateAccount" />
+
+    <TextView
+        android:id="@+id/btn_sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/sign_in"
+        android:textColor="?colorPrimary"
+        android:layout_marginStart="4dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSignIn2"
+        app:layout_constraintEnd_toEndOf="@+id/google_button"
+        app:layout_constraintStart_toEndOf="@+id/btnSignIn2"
+        app:layout_constraintTop_toTopOf="@+id/btnSignIn2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

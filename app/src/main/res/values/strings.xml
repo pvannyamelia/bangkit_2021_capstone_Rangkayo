@@ -2,4 +2,25 @@
     <string name="app_name">Rangkayo</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="create_account">Create Account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="or">Or</string>
+    <string name="welcome_to_rangkayo">Welcome to</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="slogan">Safe place, save woman and children</string>
+    <string name="hello_welcome">Hello!, Welcome</string>
+    <string name="hello_welcome_back">Hello!, Welcome Back</string>
+    <string name="sign_in_with_google">SIGN IN WITH GOOGLE</string>
 </resources>

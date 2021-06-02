@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "266597801986",
+    "project_id": "rangkayo-b588d",
+    "storage_bucket": "rangkayo-b588d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266597801986:android:41b02718407632f55a871b",
+        "android_client_info": {
+          "package_name": "com.capstone.rangkayo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "266597801986-gaf0bur4s6589c7la6a10gek2s9jmt22.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkfodgnN78rTeL1IyPW8pYVzh6hfmEa3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "266597801986-gaf0bur4s6589c7la6a10gek2s9jmt22.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

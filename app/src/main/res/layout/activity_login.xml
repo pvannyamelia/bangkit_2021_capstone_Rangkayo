@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.LoginActivity"
+    tools:ignore="Autofill, LabelFor">
+
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/sign_in"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/hello"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans"
+        android:text="@string/hello_welcome_back"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/etEmail"
+        app:layout_constraintStart_toStartOf="@+id/signup"
+        app:layout_constraintTop_toBottomOf="@id/signup" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="30dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintBottom_toTopOf="@id/etPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hello"
+        app:hintEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:background="@drawable/edittext"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans"
+            android:hint="@string/email"
+            android:drawableStart="@drawable/ic_envelope"
+            android:drawablePadding="4dp"
+            android:inputType="textEmailAddress"
+            android:padding="16dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintBottom_toTopOf="@id/btnCreateAccount"
+        app:layout_constraintEnd_toEndOf="@id/etEmail"
+        app:layout_constraintStart_toStartOf="@id/etEmail"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleDrawable="@drawable/show_password"
+        app:hintEnabled="false"
+        app:passwordToggleTint="?colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/etEmail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:background="@drawable/edittext"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans"
+            android:hint="@string/password"
+            android:drawableStart="@drawable/ic_padlock"
+            android:drawablePadding="4dp"
+            android:inputType="textPassword"
+            android:padding="16dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etConfirmPassword"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintBottom_toTopOf="@id/btnCreateAccount"
+        app:layout_constraintEnd_toEndOf="@id/etPassword"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="?colorPrimary"
+        app:passwordToggleDrawable="@drawable/show_password"
+        app:hintEnabled="false"
+
+        app:layout_constraintStart_toStartOf="@id/etPassword"
+        app:layout_constraintTop_toBottomOf="@id/etPassword" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:background="@drawable/edittext"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans"
+            android:hint="@string/confirm_password"
+            android:drawableStart="@drawable/ic_padlock"
+            android:drawablePadding="4dp"
+            android:inputType="textPassword"
+            android:padding="16dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnCreateAccount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_prim"
+        android:text="@string/sign_in"
+        app:layout_constraintBottom_toTopOf="@id/google_button"
+        app:layout_constraintEnd_toEndOf="@id/etPassword"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/etPassword"
+        app:layout_constraintTop_toBottomOf="@id/etPassword" />
+
+
+    <Button
+        android:id="@+id/google_button"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="8dp"
+        android:text="@string/sign_in_with_google"
+        android:textColor="#090909"
+        android:textSize="15sp"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/ic_google"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        app:iconTint="@null"
+        android:elevation="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSignIn2"
+        app:layout_constraintEnd_toEndOf="@+id/btnCreateAccount"
+        app:layout_constraintStart_toStartOf="@+id/btnCreateAccount"
+        app:layout_constraintTop_toBottomOf="@+id/btnCreateAccount" />
+
+
+
+    <TextView
+        android:id="@+id/btnSignIn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/opensans"
+        android:text="Don't have account?"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/btn_sign_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/google_button"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@id/google_button" />
+
+    <TextView
+        android:id="@+id/btn_sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/sign_up"
+        android:textColor="?colorPrimary"
+        android:layout_marginStart="4dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSignIn2"
+        app:layout_constraintEnd_toEndOf="@+id/google_button"
+        app:layout_constraintStart_toEndOf="@+id/btnSignIn2"
+        app:layout_constraintTop_toTopOf="@+id/btnSignIn2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
