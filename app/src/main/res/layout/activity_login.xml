@@ -51,6 +51,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
+            android:id="@+id/email"
             android:background="@drawable/edittext"
             android:layout_height="wrap_content"
             android:fontFamily="@font/opensans"
@@ -67,7 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:layout_constraintBottom_toTopOf="@id/btnCreateAccount"
+        app:layout_constraintBottom_toTopOf="@id/btn_sign_in"
         app:layout_constraintEnd_toEndOf="@id/etEmail"
         app:layout_constraintStart_toStartOf="@id/etEmail"
         app:passwordToggleEnabled="true"
@@ -82,6 +83,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/opensans"
             android:hint="@string/password"
+            android:id="@id/password"
             android:drawableStart="@drawable/ic_padlock"
             android:drawablePadding="4dp"
             android:inputType="textPassword"
@@ -95,7 +97,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:layout_constraintBottom_toTopOf="@id/btnCreateAccount"
+        app:layout_constraintBottom_toTopOf="@id/btn_sign_in"
         app:layout_constraintEnd_toEndOf="@id/etPassword"
         app:passwordToggleEnabled="true"
         app:passwordToggleTint="?colorPrimary"
@@ -118,7 +120,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnCreateAccount"
+        android:id="@+id/btn_sign_in"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/button_prim"
@@ -146,9 +148,9 @@
         app:iconTint="@null"
         android:elevation="0dp"
         app:layout_constraintBottom_toTopOf="@+id/btnSignIn2"
-        app:layout_constraintEnd_toEndOf="@+id/btnCreateAccount"
-        app:layout_constraintStart_toStartOf="@+id/btnCreateAccount"
-        app:layout_constraintTop_toBottomOf="@+id/btnCreateAccount" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_sign_in"
+        app:layout_constraintStart_toStartOf="@+id/btn_sign_in"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sign_in" />
 
 
 
@@ -181,5 +183,16 @@
         app:layout_constraintEnd_toEndOf="@+id/google_button"
         app:layout_constraintStart_toEndOf="@+id/btnSignIn2"
         app:layout_constraintTop_toTopOf="@+id/btnSignIn2" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

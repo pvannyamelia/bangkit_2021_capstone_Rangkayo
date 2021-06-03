@@ -52,6 +52,7 @@
         app:hintEnabled="false">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:background="@drawable/edittext"
             android:layout_height="wrap_content"
@@ -80,6 +81,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
+            android:id="@+id/password"
             android:background="@drawable/edittext"
             android:layout_height="wrap_content"
             android:fontFamily="@font/opensans"
@@ -108,6 +110,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:background="@drawable/edittext"
+            android:id="@+id/confirm_password"
             android:layout_height="wrap_content"
             android:fontFamily="@font/opensans"
             android:hint="@string/confirm_password"
@@ -154,14 +157,14 @@
         android:fontFamily="@font/opensans"
         android:text="Already a member?"
         android:textAlignment="center"
-        app:layout_constraintEnd_toStartOf="@id/btn_sign_up"
+        app:layout_constraintEnd_toStartOf="@id/btn_sign_in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/google_button"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintTop_toBottomOf="@id/btnCreateAccount" />
 
     <TextView
-        android:id="@+id/btn_sign_up"
+        android:id="@+id/btn_sign_in"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
@@ -174,5 +177,16 @@
         app:layout_constraintEnd_toEndOf="@+id/google_button"
         app:layout_constraintStart_toEndOf="@+id/btnSignIn2"
         app:layout_constraintTop_toTopOf="@+id/btnSignIn2" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

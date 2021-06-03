@@ -23,4 +23,10 @@
     <string name="hello_welcome">Hello!, Welcome</string>
     <string name="hello_welcome_back">Hello!, Welcome Back</string>
     <string name="sign_in_with_google">SIGN IN WITH GOOGLE</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="notification">Notification</string>
+    <string name="profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
