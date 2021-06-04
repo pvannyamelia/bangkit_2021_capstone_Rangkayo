@@ -17,13 +17,14 @@
         android:layout_height="wrap_content"
         android:foreground="?android:attr/selectableItemBackground">
 
-        <ImageView
+        <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/img_photo"
             android:layout_width="171dp"
             android:layout_height="251dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:scaleType="centerCrop"
+            app:riv_corner_radius="25dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
