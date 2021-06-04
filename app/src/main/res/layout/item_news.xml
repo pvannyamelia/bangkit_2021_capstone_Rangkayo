@@ -20,7 +20,7 @@
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/img_photo"
             android:layout_width="171dp"
-            android:layout_height="251dp"
+            android:layout_height="201dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:scaleType="centerCrop"
