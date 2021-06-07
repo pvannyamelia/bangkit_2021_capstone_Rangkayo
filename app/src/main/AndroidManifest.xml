@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Rangkayo">
-        <activity android:name=".DetailActivty"></activity>
+        <activity android:name=".chat.ChatActivity"></activity>
+        <activity android:name=".DetailActivty" />
         <activity
             android:name=".WelcomeActivity"
             android:theme="@style/NoAb" />

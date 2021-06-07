@@ -66,6 +66,12 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:28.0.1')
     implementation 'com.google.firebase:firebase-auth:21.0.1'
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    implementation 'com.firebaseui:firebase-ui-database:7.1.1'
+
+
+    //ai api
+    implementation 'ai.api:sdk:2.0.7@aar'
+    implementation 'ai.api:libai:1.4.8'
 
     //preference
     implementation 'androidx.preference:preference-ktx:1.1.1'
@@ -81,6 +87,7 @@ dependencies {
     //room
     implementation "androidx.room:room-runtime:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
+    implementation 'com.google.firebase:firebase-database:20.0.0'
     kapt "androidx.room:room-compiler:$room_version"
 
     //dagger

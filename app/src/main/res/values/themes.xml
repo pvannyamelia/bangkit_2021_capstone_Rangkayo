@@ -28,5 +28,13 @@
         <item name="android:windowActionBarOverlay">true</item>
     </style>
 
+    <style name="ActionButton" parent="@android:style/Widget.ActionButton">
+        <item name="android:drawablePadding">16dp</item>
+    </style>
 
+    <style name="Theme.MyTheme"
+        parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- other styles -->
+        <item name="android:actionButtonStyle">@style/ActionButton</item>
+    </style>
 </resources>

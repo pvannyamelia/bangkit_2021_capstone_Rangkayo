@@ -29,4 +29,7 @@
     <string name="profile">Profile</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_jhon">Hello, Jhon</string>
+    <string name="news_collection">News collection just arrived</string>
+    <string name="chat">Chat</string>
 </resources>
